@@ -58,11 +58,9 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a960027cf11c320c500efb2574c268840"></a><!-- doxytag: member="logger.h::LogStr" ref="a960027cf11c320c500efb2574c268840" args="" -->
-typedef char *&nbsp;</td><td class="memItemRight" valign="bottom"><b>LogStr</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a36a3b0da377424a974274d6a2a9c2e6e"></a><!-- doxytag: member="logger.h::LogChar" ref="a36a3b0da377424a974274d6a2a9c2e6e" args="" -->
-typedef char&nbsp;</td><td class="memItemRight" valign="bottom"><b>LogChar</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">typedef void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a1fe81eec22fbca1cfc73bcdfee9ec24e">log_callback</a> )(LogStr)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef char *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a960027cf11c320c500efb2574c268840">LogStr</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef char&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a36a3b0da377424a974274d6a2a9c2e6e">LogChar</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">typedef void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a1fe81eec22fbca1cfc73bcdfee9ec24e">log_callback</a> )(<a class="el" href="logger_8h.html#a960027cf11c320c500efb2574c268840">LogStr</a>)</td></tr>
 <tr><td colspan="2"><h2><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">enum &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ae6b7425042949b060d8fe1a5764c6985">LogBool</a> { <a class="el" href="logger_8h.html#ae6b7425042949b060d8fe1a5764c6985a84833fedef776f870c1b2616c53b12ea">LOGBOOL_FALSE</a>, 
@@ -80,7 +78,7 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#adf049476138fc6f40bfbd4c0df045756">LogReturn</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a7e4dea9bc3d6db39e31664cefc765862">log_init</a> (LogStr filename, <a class="el" href="logger_8h.html#ae6b7425042949b060d8fe1a5764c6985">LogBool</a> append, <a class="el" href="logger_8h.html#a1fe81eec22fbca1cfc73bcdfee9ec24e">log_callback</a> cb)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#adf049476138fc6f40bfbd4c0df045756">LogReturn</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a7e4dea9bc3d6db39e31664cefc765862">log_init</a> (<a class="el" href="logger_8h.html#a960027cf11c320c500efb2574c268840">LogStr</a> filename, <a class="el" href="logger_8h.html#ae6b7425042949b060d8fe1a5764c6985">LogBool</a> append, <a class="el" href="logger_8h.html#a1fe81eec22fbca1cfc73bcdfee9ec24e">log_callback</a> cb)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initializes the logging instance.  <a href="#a7e4dea9bc3d6db39e31664cefc765862"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#adf049476138fc6f40bfbd4c0df045756">LogReturn</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a89bd7d56c7f3aca98a5f61d3297b5e52">log_setlevel</a> (int level)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets global logging level.  <a href="#a89bd7d56c7f3aca98a5f61d3297b5e52"></a><br/></td></tr>
@@ -90,7 +88,7 @@ Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets console logging level.  <a href="#abbd9d642fd7e0c528fd536e7ca04768c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#adf049476138fc6f40bfbd4c0df045756">LogReturn</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a64a92c54da1858ef8587eccc450b99f8">log_setlevel_cb</a> (int level)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets callback logging level.  <a href="#a64a92c54da1858ef8587eccc450b99f8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#adf049476138fc6f40bfbd4c0df045756">LogReturn</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a5961772a75d59a11273b85632f816af7">log_log</a> (int level, const char *filename, const char *funcname, int linenum, LogStr format,...)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="logger_8h.html#adf049476138fc6f40bfbd4c0df045756">LogReturn</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#a5961772a75d59a11273b85632f816af7">log_log</a> (int level, const char *filename, const char *funcname, int linenum, <a class="el" href="logger_8h.html#a960027cf11c320c500efb2574c268840">LogStr</a> format,...)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Logs a message.  <a href="#a5961772a75d59a11273b85632f816af7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2c6faf6d03a5e0e458b683f1dc311fb"></a><!-- doxytag: member="logger.h::log_end" ref="ab2c6faf6d03a5e0e458b683f1dc311fb" args="(void)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logger_8h.html#ab2c6faf6d03a5e0e458b683f1dc311fb">log_end</a> (void)</td></tr>
@@ -104,12 +102,40 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logg
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* <a class="el" href="logger_8h.html#a1fe81eec22fbca1cfc73bcdfee9ec24e">log_callback</a>)(LogStr)</td>
+          <td class="memname">typedef void(* <a class="el" href="logger_8h.html#a1fe81eec22fbca1cfc73bcdfee9ec24e">log_callback</a>)(<a class="el" href="logger_8h.html#a960027cf11c320c500efb2574c268840">LogStr</a>)</td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 <p>Custom callback to log message </p>
+
+</div>
+</div>
+<a class="anchor" id="a36a3b0da377424a974274d6a2a9c2e6e"></a><!-- doxytag: member="logger.h::LogChar" ref="a36a3b0da377424a974274d6a2a9c2e6e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char <a class="el" href="logger_8h.html#a36a3b0da377424a974274d6a2a9c2e6e">LogChar</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Logger char type </p>
+
+</div>
+</div>
+<a class="anchor" id="a960027cf11c320c500efb2574c268840"></a><!-- doxytag: member="logger.h::LogStr" ref="a960027cf11c320c500efb2574c268840" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef char* <a class="el" href="logger_8h.html#a960027cf11c320c500efb2574c268840">LogStr</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+<p>Logger string type </p>
 
 </div>
 </div>
@@ -124,6 +150,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logg
       </table>
 </div>
 <div class="memdoc">
+<p>Logger boolean type </p>
 <dl><dt><b>Enumerator: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
 <tr><td valign="top"><em><a class="anchor" id="ae6b7425042949b060d8fe1a5764c6985a84833fedef776f870c1b2616c53b12ea"></a><!-- doxytag: member="LOGBOOL_FALSE" ref="ae6b7425042949b060d8fe1a5764c6985a84833fedef776f870c1b2616c53b12ea" args="" -->LOGBOOL_FALSE</em>&nbsp;</td><td>
 </td></tr>
@@ -179,7 +206,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logg
         <tr>
           <td class="memname"><a class="el" href="logger_8h.html#adf049476138fc6f40bfbd4c0df045756">LogReturn</a> log_init </td>
           <td>(</td>
-          <td class="paramtype">LogStr&nbsp;</td>
+          <td class="paramtype"><a class="el" href="logger_8h.html#a960027cf11c320c500efb2574c268840">LogStr</a>&nbsp;</td>
           <td class="paramname"> <em>filename</em>, </td>
         </tr>
         <tr>
@@ -246,7 +273,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logg
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">LogStr&nbsp;</td>
+          <td class="paramtype"><a class="el" href="logger_8h.html#a960027cf11c320c500efb2574c268840">LogStr</a>&nbsp;</td>
           <td class="paramname"> <em>format</em>, </td>
         </tr>
         <tr>
@@ -270,7 +297,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logg
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>level</em>&nbsp;</td><td>Level of the message (integer) </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>filename</em>&nbsp;</td><td>__FILE__ macro or use a custom string </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>funcname</em>&nbsp;</td><td>__FUNCTION__ macro or use a custom string </td></tr>
-    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>linenum,an</em>&nbsp;</td><td>integer specifying the line number, or a custom number </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>linenum</em>&nbsp;</td><td>an integer specifying the line number, or a custom number </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>format</em>&nbsp;</td><td>printf formatted format, remaining arguments are treated as print inputs.</td></tr>
   </table>
   </dd>
@@ -384,7 +411,7 @@ void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="logg
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Sat Jun 19 2010 18:31:25 for Logger by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.0 </small></address>
 </body>
