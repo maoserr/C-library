@@ -6,7 +6,8 @@
  * \date		Updated: Saturday, June 19, 2010
  * \par Installation:
  *	-# Downloads:
- *		- <a href="../argparser-0.1.tar.gz">argparser-0.1.tar.gz</a>.
+ *		- <a href="http://github.com/maoserr/C-library/tarball/master">tarball</a>.
+ *		- <a href="http://github.com/maoserr/C-library/zipball/master">zip</a>.
  *	-# Add header and source file to your project
  *		- argparser.h
  *		- argparser.c
