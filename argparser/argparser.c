@@ -7,7 +7,7 @@
  *	This is public domain code.
  */
 
-#define ARGS_TEST
+//#define ARGS_TEST
 //#define ARGS_DEBUG
 #define _(X) X
 

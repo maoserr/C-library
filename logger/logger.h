@@ -70,12 +70,15 @@ logger.c(213)[main]---Now only shown in file and cb!
 #ifndef __LOGGER_H__
 #define __LOGGER_H__
 
+/** Logger string type*/
 typedef char*		LogStr;
+/** Logger char type*/
 typedef char		LogChar;
 
 /** Custom callback to log message */
 typedef void(*log_callback)(LogStr);
 
+/** Logger boolean type*/
 typedef enum{
 	LOGBOOL_FALSE,	/*!< */
 	LOGBOOL_TRUE	/*!< */
@@ -130,7 +133,7 @@ LogReturn log_setlevel_cb(int level);
  * \param[in] level Level of the message (integer)
  * \param[in] filename __FILE__ macro or use a custom string
  * \param[in] funcname __FUNCTION__ macro or use a custom string
- * \param[in] linenum, an integer specifying the line number, or a custom number
+ * \param[in] linenum an integer specifying the line number, or a custom number
  * \param[in] format printf formatted format, remaining arguments are treated as
  * print inputs.
  * \details

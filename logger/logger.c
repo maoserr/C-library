@@ -7,7 +7,7 @@
  *	This is public domain code.
  */
 
-#define LOG_TEST
+//#define LOG_TEST
 //#define LOG_DEBUG
 #define _(X) X
 

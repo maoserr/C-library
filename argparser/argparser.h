@@ -100,6 +100,7 @@ typedef char*		ArgStr;
 /**\brief Character type */
 typedef char		ArgChar;
 
+/** Logger boolean type*/
 typedef enum{
 	ARGBOOL_FALSE,	/*!< */
 	ARGBOOL_TRUE	/*!< */
