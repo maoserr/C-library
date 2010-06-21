@@ -54,12 +54,10 @@ static LogInst *_log_init_inst(void){
 
 // Initialize logging interface
 LogReturn log_init(LogStr filename,LogBool append,log_callback cb){
-	LogReturn ret;
 	if( !(global_inst=_log_init_inst()) )
 		return LOGRET_LACK_MEM;
 	if( filename ){
 		LogStr fmode;
-		FILE *fp;
 		if( append ){
 			fmode = "a";
 			DEBUG(_("Initializing in append mode.\n"));
