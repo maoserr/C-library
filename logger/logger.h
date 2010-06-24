@@ -63,7 +63,9 @@ logger.c(206)[main]---Testing logging functionality!
 logger.c(210)[main]---Now can see this!
 logger.c(213)[main]---Now only shown in file and cb!
 \endverbatim
+ *	See \ref logger.h "here" for full API documentation.
  *
+ *	\par License
  *	This is public domain code
  */
 
