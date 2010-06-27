@@ -11,6 +11,9 @@ easy to incorporate.
 2. [Logger][2]: provides console, file
    and custom callback logging capabilities along with the ability to specify 
    different logging levels for each interface.
+	- Improvements
+		1. Decoding log level into strings
+		2. Different formatting for different interfaces
 
 
 [1]: http://maoserr.github.com/C-library/argparser/

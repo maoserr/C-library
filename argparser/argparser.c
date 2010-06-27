@@ -1,10 +1,5 @@
 /**\file		argparser.c
- * \author		Mao Yu (http://www.mao-yu.com)
- * \brief		Parses command line argument given argc and argv.
- * \details		Argument parsing functionality.
- *	See argparser.h for instructions. See bottom for test case.
- *
- *	This is public domain code.
+ * \brief		argparser source file.
  */
 
 //#define ARGS_TEST
