@@ -11,11 +11,13 @@
 //#define LOG_DEBUG
 #define _(X) X
 
+/*@ignore@*/
 #ifdef LOG_DEBUG
 # define DEBUG(...) printf(__VA_ARGS__)
 #else
 # define DEBUG(...)
 #endif
+/*@end@*/
 
 #ifdef _MSC_VER
 #define _CRT_SECURE_NO_WARNINGS
@@ -26,6 +28,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdarg.h>
+#include <time.h>
 #include "logger.h"
 
 #define BUFSIZE 2048
@@ -123,7 +126,7 @@ LogReturn log_log(int level,
 
 		DEBUG(_("Formatting log string...\n"));
 		if(filename){
-			temp=snprintf(buffer+charwritten,bufsizeleft,_("%s"),filename);
+			temp=snprintf(buffer+charwritten,bufsizeleft,_("%s: "),filename);
 			charwritten+=temp;
 			bufsizeleft-=temp;
 			DEBUG(_("File name: %d chars and %d chars remaining.\n"),
@@ -132,7 +135,7 @@ LogReturn log_log(int level,
 				return LOGRET_SNPRINTF_ERR;
 		}
 		if(linenum){
-			temp=snprintf(buffer+charwritten,bufsizeleft,_("(%d)"),linenum);
+			temp=snprintf(buffer+charwritten,bufsizeleft,_("(%d) "),linenum);
 			charwritten+=temp;
 			bufsizeleft-=temp;
 			DEBUG(_("Line number: %d chars and %d chars remaining.\n"),
@@ -141,7 +144,7 @@ LogReturn log_log(int level,
 				return LOGRET_SNPRINTF_ERR;
 		}
 		if(funcname){
-			temp=snprintf(buffer+charwritten,bufsizeleft,_("[%s]"),funcname);
+			temp=snprintf(buffer+charwritten,bufsizeleft,_("[%s] "),funcname);
 			charwritten+=temp;
 			bufsizeleft-=temp;
 			DEBUG(_("Function name: %d chars and %d chars remaining.\n"),
@@ -175,6 +178,14 @@ LogReturn log_log(int level,
 				return LOGRET_FILE_LOG_ERR;
 		}
 		if( level<=global_inst->levelconsole ){
+			time_t rawtime;
+			struct tm *timeinfo;
+			char timebuffer[80];
+
+			time( &rawtime );
+			timeinfo = localtime( &rawtime );
+			strftime(timebuffer,80,"%I:%M %p",timeinfo);
+			printf("%s:",timebuffer);
 			if( fputs(buffer, stdout) == EOF )
 				return LOGRET_CONSOLE_LOG_ERR;
 		}

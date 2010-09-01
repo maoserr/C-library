@@ -1,6 +1,7 @@
 /**\file		logger.h
  * \brief		Simple logging interface
  */
+
 #ifndef __LOGGER_H__
 #define __LOGGER_H__
 
@@ -33,7 +34,8 @@ typedef enum{
  * \param[in] append set to LOGBOOL_TRUE to append to file rather to write new one
  * \param[in] cb sets custom callback for logging strings
  */
-LogReturn log_init(LogStr filename,LogBool append,log_callback cb);
+LogReturn log_init(/*@null@*/ LogStr filename,LogBool append,
+		/*@null@*/ log_callback cb);
 
 /**\brief Sets global logging level
  * \param[in] level an integer value. Values lower than this will be pass to
@@ -74,9 +76,9 @@ LogReturn log_setlevel_cb(int level);
  * See the example case at the bottom of logger.c to see how to wrap this in a
  * macro.
  */
-LogReturn log_log(int level,
-		const char *filename,
-		const char *funcname,
+/*@printflike@*/ LogReturn log_log(int level,
+		/*@nulL@*/ const char *filename,
+		/*@nulL@*/ const char *funcname,
 		int linenum,
 		LogStr format,...);
 
